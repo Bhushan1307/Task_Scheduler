@@ -21,7 +21,7 @@ public class TaskSchedularController {
 	@Autowired
 	TaskSchedularService ts;
 	
-	@PostMapping("/task")
+	@PostMapping("/task")   
 	public String addTask(@RequestBody TaskScheduler taskschedular) {
 		return ts.addTask(taskschedular);
 	}
@@ -31,7 +31,7 @@ public class TaskSchedularController {
 		return ts.updateTask(taskScheduler);
 	} 
 	
-	@GetMapping("/getalltask")
+	@GetMapping("/getalltask")      // change the name of Rest api here
 	public List <TaskScheduler> getAllTask() {
 		return ts.getAllTask();
 	}
